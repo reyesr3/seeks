@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New User</title>
+</head>
+<body>
+<h1>Create a New User</h1>
+
+<form action="/users" method="post">
+	<%=token_tag nil %>
+	<p>
+		<label>Name:</label>
+		<input type="text" name="user[name]">
+	</p>
+	<p>
+		<label>Email:</label>
+		<input type="text" name="user[email]">
+	</p>
+	<p>
+		<label>Password:</label>
+		<input type="password" name="user[password]">
+	</p>
+	<p>
+		<label>Password Confirmation:</label>
+		<input type="password" name="user[password_confirmation]">
+	</p>
+	<button type="submit" value="join">Submit</button>
+</form>
+
+<a href="/sessions/new">Already Registered?</a>
+
+</body>
+</html>
